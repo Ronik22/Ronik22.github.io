@@ -20,6 +20,7 @@ let myPromise = new Promise((resolve, reject) => {
 			styles = $("#style-text")
 				.html()
 				.replace(/([a-zA-Z- ^\n]*)$/, '<em class="key">$1</em>:');
+				
 		} else if (which === ";") {
 			styles = $("#style-text")
 				.html()
@@ -28,6 +29,10 @@ let myPromise = new Promise((resolve, reject) => {
 			styles = $("#style-text")
 				.html()
 				.replace(/(.*)$/, '<em class="selector">$1</em>{');
+		} else if (which === 'x' && /\dp/.test($("#style-text").html().slice(-2))) {
+			styles = $("#style-text")
+				.html()
+				.replace(/p$/, '<em class="value px">px</em>');
 		} else {
 			styles = $("#style-text").html() + which;
 		}
@@ -51,7 +56,7 @@ let myPromise = new Promise((resolve, reject) => {
 
 	$("body").append(
 		`<style id="style-tag"></style>
-        <span hidden id="echo"></span>
+        <p id="nav"></p>
         <pre contenteditable id="style-text"></pre>`
 	);
 
@@ -71,7 +76,13 @@ let myPromise = new Promise((resolve, reject) => {
 // });
 
 
-myPromise.then((value)=> {
+myPromise
+// .then(
+// 	document.addEventListener( 'DOMContentLoaded', function () {
+// 		new Splide( '.splide' ).mount();
+// 	})
+// )
+.then((value)=> {
 	console.log(value);
 	$( "pre" ).on('DOMSubtreeModified', function () {
 		var textArea = document.createElement("textarea");

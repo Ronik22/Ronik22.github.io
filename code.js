@@ -1,34 +1,38 @@
 var mystyles = `
 /* 
 * Hey, I am Ronik Bhattacharjee
-* I am a web developer
+* I am a passionate web developer from India
 */
 
 * {
-    transition-duration: 200ms;
+    transition: all 200ms;
 }
 
 body {
     background-color: #1a1c24; 
     color: #fff;
-    font-size: 13px; 
+    font-size: 14px; 
     line-height: 1.4;
     -webkit-font-smoothing: subpixel-antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 pre { 
     position: fixed; 
-    width: 48%;
-    top: 30px; 
-    bottom: 30px; 
-    left: 26%;
-    transition: left 500ms;
+    width: 96%;
+    top: 60%; 
+    bottom: 1px;
+
     overflow: auto;
     background-color: #2d313a; 
-    color: #ffd82a;
+    color: #ffffff;
     border: 1px solid rgba(0,0,0,0.2);
     padding: 24px 12px;
     box-sizing: border-box;
+    border: 2px solid #ccc;
     border-radius: 3px;
     box-shadow: 0px 4px 0px 2px rgba(0,0,0,0.1);
 }
@@ -36,22 +40,56 @@ pre {
 pre em:not(.comment) { font-style: normal; }
 
 .comment       { color: #a3ff58c0; }
-.selector      { color: #ff8692; }
-.selector .key { color: #f698ff; }
-.key           { color: #ffffff; }
-.value         { color: #00ccff; }
+.selector      { color: #ffd82a; }
+.selector .key { color: #d386ff; }
+.key           { color: #00ccff; }
+.value         { color: #f48eff; }
+.valuepx     { color: #ff5f6f; }
 
 
-/* First, we'll move this block over */
+/* 
+* It's looking empty.... Let's style a navbar  
+*/
 
-pre { left: 50%; }
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #333;
+    width: 95%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #ffe947;
+    color: black;
+  }
 
+  #social-nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
 
-/* Now we can build my heart */
 
 /* 
 * Hehe...I changed my mind...
-* See you later!
+* BTW, You can play with the code
+* Try writing some css inside this container
 */
 `;
 
