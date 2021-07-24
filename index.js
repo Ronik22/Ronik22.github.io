@@ -77,11 +77,47 @@ let myPromise = new Promise((resolve, reject) => {
 
 
 myPromise
-// .then(
-// 	document.addEventListener( 'DOMContentLoaded', function () {
-// 		new Splide( '.splide' ).mount();
-// 	})
-// )
+.then(
+	$(".owl-carousel").owlCarousel({
+		autoplay: true,
+		center: true,
+		loop:true,
+		items:1,
+		margin:30,
+		autoWidth:true,
+		stagePadding: 200,
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 60
+			},
+			600:{
+				items:1,
+				stagePadding: 100
+			},
+			1000:{
+				items:1,
+				stagePadding: 200
+			},
+			1200:{
+				items:1,
+				stagePadding: 250
+			},
+			1400:{
+				items:1,
+				stagePadding: 300
+			},
+			1600:{
+				items:1,
+				stagePadding: 350
+			},
+			1800:{
+				items:1,
+				stagePadding: 400
+			}
+		}
+	})
+)
 .then((value)=> {
 	console.log(value);
 	$( "pre" ).on('DOMSubtreeModified', function () {

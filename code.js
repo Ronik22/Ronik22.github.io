@@ -14,18 +14,16 @@ body {
     font-size: 14px; 
     line-height: 1.4;
     -webkit-font-smoothing: subpixel-antialiased;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;    
 }
 
 pre { 
     position: fixed; 
-    width: 96%;
-    top: 60%; 
+    margin: 12px;
+    top: 66%; 
     bottom: 1px;
-
+    left: 1px;
+    right: 1px;
     overflow: auto;
     background-color: #2d313a; 
     color: #ffffff;
@@ -44,47 +42,25 @@ pre em:not(.comment) { font-style: normal; }
 .selector .key { color: #d386ff; }
 .key           { color: #00ccff; }
 .value         { color: #f48eff; }
-.valuepx     { color: #ff5f6f; }
+.value .px     { color: #ff5f6f; }
 
 
 /* 
 * It's looking empty.... Let's style a navbar  
 */
 
-ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    background-color: #333;
-    width: 95%;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px 18px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #ffe947;
-    color: black;
-  }
-
   #social-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     list-style-type: none;
   }
 
+
+  .project-container{
+    display: block;
+    width: auto;
+    margin: 2px;
+  }
 
 /* 
 * Hehe...I changed my mind...

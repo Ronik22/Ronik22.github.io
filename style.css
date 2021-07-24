@@ -8,7 +8,7 @@ ul {
     display: none;
 }
 
-.fa {
+.fab, .fas {
     padding: 15px;
     font-size: 18px;
     width: 18px;
@@ -18,22 +18,62 @@ ul {
     border-radius: 50%;
   }
   
-  .fa:hover {
+  .fab:hover, .fas:hover {
       opacity: 0.7;
   }
   
   
   .fa-twitter {
-    background: #55ACEE;
+    background: #38a9ff;
     color: white;
   }
   
-  .fa-google {
-    background: #dd4b39;
-    color: white;
+  .fa-github {
+    background: #ffffff;
+    color: rgb(8, 8, 8);
   }
   
   .fa-linkedin {
-    background: #007bb5;
+    background: rgb(35, 57, 255);
     color: white;
   }
+
+  .fa-ellipsis-v{
+    background: rgb(255, 35, 119);
+    color: white;
+  }
+
+
+
+  .project-container {
+    margin: 15px;
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+    display: none;
+    
+  }
+
+  .owl-carousel{
+    height: 200px;
+  }
+
+  .item img{
+    height: 160px;
+    width: auto;
+  }
+
+  .owl-item{
+    opacity:0.2;
+    transition:.4s ease all;
+    transform:scale(.8);
+  }
+  @media(max-width:1000px){
+    .owl-item{margin:0; transform:scale(.9)}
+  }
+  .owl-item.active.center{
+    opacity:1;
+    transform:scale(1);
+  } 
+  
+  
