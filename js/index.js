@@ -36,19 +36,20 @@ $(document).ready(() => {
 					ease: "elastic.out(1, 0.3)",
 				});
 
-				gsap.timeline({scrollTrigger:{
+			gsap.timeline({
+				scrollTrigger: {
 					trigger: "#aboutMe",
 					scrub: 1.5,
-					end:"top 40%",
-				}})
+					end: "top 40%",
+				},
+			})
 				.from("#about-img", {
 					x: -1000,
-					duration: 2
+					duration: 2,
 				})
 				.from("#about-para", {
 					x: 1000,
 				});
-
 
 			gsap.from(".pcard", {
 				scrollTrigger: {
@@ -106,16 +107,13 @@ $(document).ready(() => {
 					window.location.href = redirectlink;
 				}, 1000);
 				$(".nav-toggle").toggleClass("nav-active");
-				$(".navigation").toggleClass("nav-active");			
-			});
-
-
-			$(".nav-toggle").click(function() {
-				$(this).toggleClass("nav-active");
 				$(".navigation").toggleClass("nav-active");
 			});
 
-
+			$(".nav-toggle").click(function () {
+				$(this).toggleClass("nav-active");
+				$(".navigation").toggleClass("nav-active");
+			});
 		}, 1000);
 	});
 });
