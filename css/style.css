@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Plaster&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-	--color-black: #141414;
-	--color-red: #e9103a;
+	--color-black: rgb(44 37 37);
+	--color-red: rgb(255 61 61);
 }
 
 /* 
@@ -396,19 +396,32 @@ p {
 .mysec-title {
 	position: relative;
 	color: var(--color-red);
-	background-image: url("../assets/headingbgin.jpg");
+	/* background-image: url("../assets/headingbgin.jpg"); */
 	background-repeat: repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 5em;
-	font-family: "Montserrat", sans-serif;
+	font-size: 3.5em;
+	font-family: "Raleway","Montserrat", sans-serif;
 	font-weight: 800;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	-webkit-background-clip: text;
+	/* -webkit-text-fill-color: transparent; */
+	/* background-clip: text; */
+	/* -webkit-background-clip: text; */
 	white-space: nowrap;
+}
+
+.mysec-title::before {
+	content: "";
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    transform: translate(-90px, 0px);
+    height: 15px;
+    background: linear-gradient(#ff6347, #ff6347) bottom;
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
 }
 
 .mysec-title::after {
@@ -422,6 +435,7 @@ p {
 	background: linear-gradient(#ff6347, #ff6347) bottom;
 	background-size: 100% 4px;
 	background-repeat: no-repeat;
+	display: none;
 }
 
 .row {
@@ -432,17 +446,17 @@ p {
 }
 
 .about-me {
-	padding-top: 10%;
-	padding-bottom: 10%;
+	/* padding-top: 10%; */
+	/* padding-bottom: 10%; */
 	overflow-x: hidden;
 	background-color: #ffffff;
 	/* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("https://images.unsplash.com/photo-1518665750801-883c188a660d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=667&q=80"); */
-	background: linear-gradient(
+	/* background: linear-gradient(
 			to bottom,
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 1)
 		),
-		url("../assets/pexels-tirachard-kumtanom-733857.jpg");
+		url("../assets/pexels-tirachard-kumtanom-733857.jpg"); */
 	background-position: center;
 	background-size: cover;
 	min-height: 100vh;
@@ -687,6 +701,14 @@ p {
 	padding: 8px 10px;
 }
 
+.left-bg {
+    height: 100%;
+	width: 25%;
+	left: 0;
+    position: absolute;
+	display: block;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 992px) {
@@ -705,13 +727,25 @@ p {
 		top: 0;
 	}
 
+	.left-bg {
+		display: none;
+	}
+
+	.mysec-title::after {
+		display: block;
+	}
+
+	.mysec-title::before {
+		display: none;
+	}
+
 	.nav-item {
 		font-size: 1.7em;
 		line-height: 2em;
 	}
 
 	.mysec-title {
-		font-size: 3em;
+		font-size: 2em;
 	}
 
 	#hero-text {

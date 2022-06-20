@@ -43,12 +43,16 @@ $(document).ready(() => {
 					end: "top 40%",
 				},
 			})
+				.from("#left-bg", {
+					x: -2000,
+					duration: 50,
+				})
 				.from("#about-img", {
 					x: -1000,
-					duration: 2,
+					duration: 5,
 				})
 				.from("#about-para", {
-					x: 1000,
+					x: 2000,
 				});
 
 			gsap.from(".pcard", {
