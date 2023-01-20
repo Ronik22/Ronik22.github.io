@@ -1,0 +1,52 @@
+.cursor {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: var(--color-red);
+	width: 2.5rem;
+	height: 2.5rem;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	will-change: transform;
+	user-select: none;
+	pointer-events: none;
+	z-index: 999999;
+	mix-blend-mode: difference;
+	transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.cursor span {
+	visibility: hidden;
+}
+
+.chover {
+	width: 3.5rem;
+	height: 3.5rem;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	mix-blend-mode: normal;
+	border: none;
+}
+
+.chover span {
+	visibility: visible;
+}
+
+.cursor2 {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	background-color: transparent;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: all 200ms ease-out;
+}
+
+::selection {
+	color: #fff;
+	background: var(--color-red);
+}

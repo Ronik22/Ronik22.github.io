@@ -1,0 +1,80 @@
+.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.navigation.nav-active {
+	visibility: visible;
+}
+
+.navigation span {
+	position: absolute;
+	top: -100%;
+	left: calc(25% * var(--i));
+	width: 25%;
+	height: 100%;
+	background: #272436;
+    color: #fff;
+	transition: 0.25s;
+	// border: 1px solid black; 
+	transition-delay: calc(0.25s * var(--i));
+}
+
+.navigation.nav-active span {
+	top: 0;
+}
+
+.navigation ul {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	z-index: 5;
+	transform: translateX(-100px);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color .3s;
+
+    &:hover {
+        color: $themeClrPrimary;
+    }
+}
+
+.navigation.nav-active ul {
+	transform: translateX(0px);
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.75s;
+    color: #fff;
+    font-size: 3rem;
+}
+
+// @for $i from 1 through 4 {
+//     .navigation.nav-active ul li:nth-child(#{$i}) {
+//         transition-delay: #{$i * 0.5}s;
+//     }
+// }

@@ -1,0 +1,61 @@
+$speed: 0.5s;
+
+.btn-flip{
+	opacity: 1;
+	outline: 0;
+	color: #fff;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'Open Sans';
+	text-transform: uppercase;
+
+	
+	&:hover{
+		
+		&:after{
+			opacity: 1;
+			transform: translateY(0) rotateX(0);
+		}
+		
+		&:before{
+			opacity: 0;
+			transform: translateY(50%) rotateX(90deg);
+		}
+	}
+	
+	&:after{
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		color: #323237;
+		display: block;
+		transition: $speed;
+		position: absolute;
+		background: $themeClrPrimary;
+		content: attr(data-back);
+		padding: 1.5rem 8rem;
+    	font-size: 2rem;
+		transform: translateY(-50%) rotateX(90deg);
+	}
+	
+	&:before{
+		top: 0;
+		left: 0;
+		opacity: 1;
+		color: $themeClrPrimary;
+		display: block;
+		padding: 1.5rem 8rem;
+    	font-size: 2rem;
+		line-height: 40px;
+		transition: $speed;
+		position: relative;
+		background: #fff;
+		content: attr(data-front);
+		transform: translateY(0) rotateX(0);
+	}
+}

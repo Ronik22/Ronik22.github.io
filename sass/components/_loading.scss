@@ -1,0 +1,165 @@
+// trig.scss
+
+$pi: 3.14159265359;
+$_precision: 10;
+
+@function pow($base, $exp) {
+  $value: $base;
+  @if $exp > 1 {
+    @for $i from 2 through $exp {
+      $value: $value * $base;
+    }
+  }
+  @if $exp < 1{
+    @for $i from 0 through -$exp {
+      $value: calc($value / $base);
+    }
+  }
+  @return $value;
+}
+
+@function fact($num) {
+  $fact: 1;
+  @if $num > 0{
+    @for $i from 1 through $num {
+      $fact: $fact * $i;
+    }
+  }
+  @return $fact;
+}
+
+@function _to_unitless_rad($angle) {
+  @if unit($angle) == "deg" {
+    $angle: calc($angle / 180deg) * $pi;
+  }
+  @if unit($angle) == "rad" {
+    $angle: calc($angle / 1rad);
+  }
+  @return $angle;
+}
+
+@function sin($angle){
+  $a: _to_unitless_rad($angle%360);
+  $sin: $a;
+  @for $n from 1 through $_precision {
+    $sin: $sin + calc(pow(-1, $n) / fact(2 * $n + 1) ) * pow($a, (2 * $n + 1));
+  }
+  @return $sin;
+}
+
+@function cos($angle){
+  $a: _to_unitless_rad($angle%360);
+  $cos: 1;
+  @for $n from 1 through $_precision {
+    $cos: $cos + calc( pow(-1,$n) / fact(2*$n) ) * pow($a,2*$n);
+  }
+  @return $cos;
+}
+
+@function tan($angle){
+  @return sin($angle) / cos($angle);
+}
+
+// end of trig.scss
+
+//Edit these
+$small: 10; //Number of small dots
+$smallsize: 10%;
+$big: 5; // Number of big dots
+$bigsize: 15%;
+
+//Not these
+$radius:50%-$bigsize;
+$smalldots: ();
+$smalldotpositions: ();
+$smalldotsizes: ();
+$as:calc(360deg/$small);
+$bigdots: ();
+$bigdotpositions:();
+$bigdotsizes: ();
+$ab:calc(360deg/$big);
+
+:root {
+	--dotcolor:50, 49, 51;
+	--dot: radial-gradient(rgb(var(--dotcolor)) 67%, rgba(var(--dotcolor), 0) 68%);
+}
+/*
+	For small and big construct:
+	• List of radial-gradients/var(--dot) [all the same, can be different for different colours] => background-image
+	• List of positions, using trig to go around a radius => background-position
+	• List of sizes [all the same, can be different for different sizes] => background-size
+	Also background-repeat: no-repeat; and background-color:white; are vital
+*/
+@for $i from 0 to $small {
+	$smalldots: $smalldots, var(--dot);
+	$smalldotpositions: $smalldotpositions, (50% + (($radius+calc($smallsize/2))*sin($as*$i))) (50% + (($radius+calc($smallsize/2))*cos($as*$i)));
+	$smalldotsizes: $smalldotsizes, $smallsize $smallsize;
+}
+@for $i from 0 to $big {
+	$bigdots: $bigdots, var(--dot);
+	$bigdotpositions: $bigdotpositions, (50% + (($radius+calc($bigsize/2))*sin($ab*$i))) (50% + (($radius+calc($bigsize/2))*cos($ab*$i)));
+	$bigdotsizes: $bigdotsizes, $bigsize $bigsize;
+}
+
+.spinner-after {
+	width: 100vw;
+	height: 100vh;
+	background: rgb(36, 35, 35);
+	position: fixed;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+}
+
+.spinner-body {
+	place-items:center;
+	display: grid;
+
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+
+	.spinner {
+		position: relative;
+		width:50vmin;
+		height:50vmin;
+		filter: blur(1vmin) contrast(12); //Blur so the dots overlap, then use contrast to make the overlapping blurred parts solid.
+		&:before, &:after {
+			display:block;
+			content: '';
+			position: absolute;
+			width:100%;
+			height:100%;
+			transform-origin:50% 50%;
+			background-color:white;
+			background-repeat:no-repeat;
+			animation:spin linear infinite;
+			mix-blend-mode:multiply; //:after has a white background, to make it show through use multiply so the black becomes visible
+		}
+		&:before {
+			background-image:$smalldots;
+			background-position:$smalldotpositions;
+			background-size:$smalldotsizes;
+			animation-duration:10s;
+		}
+		&:after {
+			background-image:$bigdots;
+			background-position:$bigdotpositions;
+			background-size:$bigdotsizes;
+			animation-duration:5s;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}

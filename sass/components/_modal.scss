@@ -1,0 +1,44 @@
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+.my-modal {
+    position: fixed;
+    background-color: #fff;
+    // background-color: rgba(0, 0, 0, 0.8);
+    // color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    overflow: auto;
+    z-index: 9999;
+    height: 100%;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-modal-content {
+    position: absolute;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em;
+}
+
+.js-close {
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    font-size: 5rem;
+    color: #000;
+    background-color: transparent;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.26), 0 26px 52px rgba(0, 0, 0, 0.26);
+    @include respond(phone) {
+        right: 10px;
+        top: 10px;
+    }
+}
