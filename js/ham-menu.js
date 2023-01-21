@@ -1,4 +1,5 @@
 const hamMenuBtn = document.querySelector(".header__main-ham-menu-cont");
+const headerLogoText = document.querySelector(".header__logo-sub");
 const headerHamMenuBtn = document.querySelector(".header__main-ham-menu");
 
 const navigationSection = document.querySelector(".navigation");
@@ -18,8 +19,10 @@ hamMenuBtn.addEventListener("click", () => {
 
 	if (navigationSection.classList.contains("nav-active")) {
 		navigationSection.classList.remove("nav-active");
+		headerLogoText.style.color = "#000";
 	} else {
 		navigationSection.classList.add("nav-active");
+		headerLogoText.style.color = "#fff";
 	}
 
 	if (headerHamMenuBtn.getAttribute("aria-expanded") === "true") {
@@ -38,6 +41,7 @@ for (let i = 0; i < headerSmallMenuLinks2.length; i++) {
 		setTimeout(() => {
 			window.location.href = redirectlink;
 		}, 1000);
+		headerLogoText.style.color = "#000";
 		navigationSection.classList.remove("nav-active");
 		headerHamMenuBtn.classList.remove("opened");
 		headerHamMenuBtn.setAttribute("aria-expanded", "false");

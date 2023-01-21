@@ -7,10 +7,10 @@ function loadScript(url)
     head.appendChild(script);
 }
 
-loadScript('./js/_gsap-timeline.js');
+loadScript('./js/gsap-timeline.js');
 // loadScript('./js/_loader.js');
-loadScript('./js/_ham-menu.js');
-loadScript('./js/_social-btn.js');
-loadScript('./js/_see-more.js');
-loadScript('./js/_modal.js');
+loadScript('./js/ham-menu.js');
+loadScript('./js/social-btn.js');
+loadScript('./js/see-more.js');
+loadScript('./js/modal.js');
 

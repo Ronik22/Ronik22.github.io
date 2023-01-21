@@ -1,134 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Hi, its Ronik Bhattacharjee. This is my Portfolio page." />
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-7129TCPWSH"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-    <link href="./assets/favicon.png" rel="icon">
-    <link href="./assets/" rel="apple-touch-icon">
-
-    <title>Ronik Bhattacharjee | Portfolio</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Loading spinner -->
-    <div class="spinner-body">
-      <div class="spinner"></div>
-    </div>
-    <div class="spinner-after"></div>
+			gtag("config", "G-7129TCPWSH");
+		</script>
     
-    
-    <!-- CUSTOM CURSOR -->
-    <!-- <div class="cursor">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Hi, its Ronik Bhattacharjee. This is my Portfolio page."
+		/>
+
+		<link href="./assets/favicon.png" rel="icon" />
+		<link href="./assets/" rel="apple-touch-icon" />
+
+		<title>Ronik Bhattacharjee | Portfolio</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Loading spinner -->
+		<div class="spinner-body">
+			<div class="spinner"></div>
+		</div>
+		<div class="spinner-after"></div>
+
+		<!-- CUSTOM CURSOR -->
+		<!-- <div class="cursor">
       <span>View</span>
     </div>
     <div class="cursor2"></div> -->
 
-     <!-- FIXED SOCIAL BUTTON -->
-    <div title="Contact Me" class="action" onclick="actionToggle();">
-      <span><i alt="phone" class="fas fa-phone-alt"></i></span>
-      <ul>
-        <li><a aria-label="github" href="https://github.com/Ronik22" target="_blank"><i class="fab fa-github"></i></a></li>
-        <li><a aria-label="Twitter" href="https://twitter.com/Ronik_DVR" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        <li><a aria-label="linkedin" href="https://www.linkedin.com/in/ronikb22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </li>
-      </ul>
-    </div>
-    <!-- FIXED SOCIAL BUTTON -->
+		<!-- FIXED SOCIAL BUTTON -->
+		<div title="Contact Me" class="action" onclick="actionToggle();">
+			<span><i alt="phone" class="fas fa-phone-alt"></i></span>
+			<ul>
+				<li>
+					<a
+						aria-label="github"
+						href="https://github.com/Ronik22"
+						target="_blank"
+						><i class="fab fa-github"></i
+					></a>
+				</li>
+				<li>
+					<a
+						aria-label="Twitter"
+						href="https://twitter.com/Ronik_DVR"
+						target="_blank"
+						><i class="fab fa-twitter"></i
+					></a>
+				</li>
+				<li>
+					<a
+						aria-label="linkedin"
+						href="https://www.linkedin.com/in/ronikb22/"
+						target="_blank"
+						><i class="fab fa-linkedin-in"></i
+					></a>
+				</li>
+			</ul>
+		</div>
+		<!-- FIXED SOCIAL BUTTON -->
 
-    <!-- Header -->
-    <header class="header">
-      <div class="header__content">
-        <a href="#" class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/self3.jpg"
-              alt="Ronik Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Ronik</span>
-        </a>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a title="Home, sweet home" href="#" class="header__link">Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a title="Who am I ?" href="#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a title="What have I done ?" href="#projects" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li title="Up for a chat ?" class="header__link-wrapper">
-              <a href="#contact" class="header__link">Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <div class="header__main-ham-menu" aria-label="Main Menu" aria-expanded="false">
-              <svg width="35" height="35" viewbox="0 0 100 100">
-                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+		<!-- Header -->
+		<header class="header">
+			<div class="header__content">
+				<a href="#" class="header__logo-container">
+					<div class="header__logo-img-cont">
+						<img
+							src="./assets/self3.jpg"
+							alt="Ronik Logo Image"
+							class="header__logo-img"
+						/>
+					</div>
+					<span class="header__logo-sub">Ronik</span>
+				</a>
+				<div class="header__main">
+					<ul class="header__links">
+						<li class="header__link-wrapper">
+							<a
+								title="Home, sweet home"
+								href="#"
+								class="header__link"
+								>Home
+							</a>
+						</li>
+						<li class="header__link-wrapper">
+							<a
+								title="Who am I ?"
+								href="#about"
+								class="header__link"
+								>About
+							</a>
+						</li>
+						<li class="header__link-wrapper">
+							<a
+								title="What have I done ?"
+								href="#projects"
+								class="header__link"
+							>
+								Projects
+							</a>
+						</li>
+						<li
+							title="Up for a chat ?"
+							class="header__link-wrapper"
+						>
+							<a href="#contact" class="header__link">Contact </a>
+						</li>
+					</ul>
+					<div class="header__main-ham-menu-cont">
+						<div
+							class="header__main-ham-menu"
+							aria-label="Main Menu"
+							aria-expanded="false"
+						>
+							<svg width="35" height="35" viewbox="0 0 100 100">
+								<path
+									class="line line1"
+									d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+								/>
+								<path class="line line2" d="M 20,50 H 80" />
+								<path
+									class="line line3"
+									d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+								/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <section class="navigation">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
-        <ul>
-          <li class="nav-item container">
-            <a aria-label="Home" class="nav-link cursor-change" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item container">
-            <a aria-label="About" class="nav-link cursor-change" aria-current="page" href="#about">About</a>
-          </li>
-          <li class="nav-item container">
-            <a aria-label="About" class="nav-link cursor-change" aria-current="page" href="#about">Projects</a>
-          </li>
-          <li class="nav-item container">
-            <a aria-label="About" class="nav-link cursor-change" aria-current="page" href="#about">Contact</a>
-          </li>
-        </ul>
-      </section>
-    </header>
+			<section class="navigation">
+				<span style="--i: 0"></span>
+				<span style="--i: 1"></span>
+				<span style="--i: 2"></span>
+				<span style="--i: 3"></span>
+				<ul>
+					<li class="nav-item container">
+						<a
+							aria-label="Home"
+							class="nav-link"
+							aria-current="page"
+							href="#"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item container">
+						<a
+							aria-label="About"
+							class="nav-link"
+							aria-current="page"
+							href="#about"
+							>About</a
+						>
+					</li>
+					<li class="nav-item container">
+						<a
+							aria-label="About"
+							class="nav-link"
+							aria-current="page"
+							href="#projects"
+							>Projects</a
+						>
+					</li>
+					<li class="nav-item container">
+						<a
+							aria-label="About"
+							class="nav-link"
+							aria-current="page"
+							href="#contact"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</section>
+		</header>
 
-    <!-- Home hero -->
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary split-me">
-          Hey, I'm Ronik Bhattacharjee
-        </h1>
-        <div class="home-hero__info">
-          <p class="text-primary split-me">
-            A python developer with an appetite for problem solving and figuring out how things work under the hood
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-      <!-- <div class="home-hero__socials">
+		<!-- Home hero -->
+		<section class="home-hero">
+			<div class="home-hero__content">
+				<h1 class="heading-primary split-me">
+					Hey, I'm Ronik Bhattacharjee
+				</h1>
+				<div class="home-hero__info">
+					<p class="text-primary split-me">
+						A python developer with an appetite for problem solving
+						and figuring out how things work under the hood
+					</p>
+				</div>
+				<div class="home-hero__cta">
+					<a href="#projects" class="btn btn--bg">Projects</a>
+				</div>
+			</div>
+			<!-- <div class="home-hero__socials">
         <div class="home-hero__social">
           <a href="#" class="home-hero__social-icon-link">
             <img
@@ -157,457 +250,618 @@
           </a>
         </div>
       </div> -->
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
+			<div class="home-hero__mouse-scroll-cont">
+				<div class="mouse"></div>
+			</div>
+		</section>
 
-    <!-- About section -->
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            Here you will find more information about me, what I do, and my technology stack
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Hey! It's
-                <strong>Ronik Bhattacharjee</strong>
-                I am an Undergraduate, majoring in Information Technology. 
-                I am passionate about web development, and I love how the field is almost all-encompassing. 
-                I enjoy learning, and I am always curious about things. 
-                Being a detailed oriented person, I keep my goals and tasks organized to maintain productivity.
-              </p>
-              <p class="about__content-details-para">
-                My leisure time includes me reading Tech articles, watching movies and playing games.
-                Got anything to talk about?
-                Feel free to
-                <strong>contact</strong> me here because the best ideas start as conversations.
-              </p>
-            </div>
-            <a href="#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Get in touch</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Technology stack</h3>
-            <div class="skills">
-              <li class="m-1"><img
-                src="https://img.shields.io/badge/HTML%20-%23F7DF1E.svg?&style=for-the-badge&color=E34F26&logo=html5&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/css%20-%23F7DF1E.svg?&style=for-the-badge&color=5CD8EE&logo=css3&logoColor=black" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?&style=for-the-badge&color=F7DF1E&logo=javascript&logoColor=black" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Python%20-%23F7DF1E.svg?&style=for-the-badge&color=115B9A&logo=python&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Django%20-%23F7DF1E.svg?&style=for-the-badge&color=0F4B13&logo=django&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Flask%20-%23F7DF1E.svg?&style=for-the-badge&color=1f0b47&logo=flask&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Figma%20-%23F7DF1E.svg?&style=for-the-badge&color=A259FF&logo=figma&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Bootstrap%20-%23F7DF1E.svg?&style=for-the-badge&color=7044A3&logo=bootstrap&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Sass%20-%23F7DF1E.svg?&style=for-the-badge&color=CD6799&logo=sass&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/SQLite%20-%23F7DF1E.svg?&style=for-the-badge&color=1E4C68&logo=sqlite&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Git%20-%23F7DF1E.svg?&style=for-the-badge&color=abf&logo=git&logoColor=black" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/GitHub%20-%23F7DF1E.svg?&style=for-the-badge&color=000&logo=github&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/%20-%23F7DF1E.svg?&style=for-the-badge&color=6633ff&logo=c&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Java%20-%23F7DF1E.svg?&style=for-the-badge&color=8D6748&logo=java&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/Fast%20API%20-%23F7DF1E.svg?&style=for-the-badge&color=009485&logo=fastapi&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/GCP%20-%23F7DF1E.svg?&style=for-the-badge&color=E34133&logo=google%20cloud&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/React%20-%23F7DF1E.svg?&style=for-the-badge&color=61DAFB&logo=react&logoColor=black" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/MongoDB%20-%23F7DF1E.svg?&style=for-the-badge&color=5C9A37&logo=mongodb&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/MySQL%20-%23F7DF1E.svg?&style=for-the-badge&color=1E4C68&logo=mysql&logoColor=white" />
-              </li>
-              <li class="m-1"><img
-                  src="https://img.shields.io/badge/jQuery%20-%23F7DF1E.svg?&style=for-the-badge&color=0769AD&logo=jquery&logoColor=white" />
-              </li>
-              <!-- <div class="skills__skill">HTML</div>
+		<!-- About section -->
+		<section id="about" class="about sec-pad">
+			<div class="main-container">
+				<h2 class="heading heading-sec heading-sec__mb-med">
+					<span class="heading-sec__main">About Me</span>
+					<span class="heading-sec__sub">
+						Here you will find more information about me, what I do,
+						and my technology stack
+					</span>
+				</h2>
+				<div class="about__content">
+					<div class="about__content-main">
+						<h3 class="about__content-title">Get to know me!</h3>
+						<div class="about__content-details">
+							<p class="about__content-details-para">
+								Hey! It's
+								<strong>Ronik Bhattacharjee</strong>
+								I am an Undergraduate, majoring in Information
+								Technology. I am passionate about web
+								development, and I love how the field is almost
+								all-encompassing. I enjoy learning, and I am
+								always curious about things. Being a detailed
+								oriented person, I keep my goals and tasks
+								organized to maintain productivity.
+							</p>
+							<p class="about__content-details-para">
+								My leisure time includes me reading Tech
+								articles, watching movies and playing games. Got
+								anything to talk about? Feel free to
+								<strong>contact</strong> me here because the
+								best ideas start as conversations.
+							</p>
+						</div>
+						<a
+							href="#contact"
+							class="btn btn--med btn--theme dynamicBgClr"
+							>Get in touch</a
+						>
+					</div>
+					<div class="about__content-skills">
+						<h3 class="about__content-title">
+							My Technology stack
+						</h3>
+						<div class="skills">
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/HTML%20-%23F7DF1E.svg?&style=for-the-badge&color=E34F26&logo=html5&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/css%20-%23F7DF1E.svg?&style=for-the-badge&color=5CD8EE&logo=css3&logoColor=black"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?&style=for-the-badge&color=F7DF1E&logo=javascript&logoColor=black"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Python%20-%23F7DF1E.svg?&style=for-the-badge&color=115B9A&logo=python&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Django%20-%23F7DF1E.svg?&style=for-the-badge&color=0F4B13&logo=django&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Flask%20-%23F7DF1E.svg?&style=for-the-badge&color=1f0b47&logo=flask&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Figma%20-%23F7DF1E.svg?&style=for-the-badge&color=A259FF&logo=figma&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Bootstrap%20-%23F7DF1E.svg?&style=for-the-badge&color=7044A3&logo=bootstrap&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Sass%20-%23F7DF1E.svg?&style=for-the-badge&color=CD6799&logo=sass&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/SQLite%20-%23F7DF1E.svg?&style=for-the-badge&color=1E4C68&logo=sqlite&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Git%20-%23F7DF1E.svg?&style=for-the-badge&color=abf&logo=git&logoColor=black"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/GitHub%20-%23F7DF1E.svg?&style=for-the-badge&color=000&logo=github&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/%20-%23F7DF1E.svg?&style=for-the-badge&color=6633ff&logo=c&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Java%20-%23F7DF1E.svg?&style=for-the-badge&color=8D6748&logo=java&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/Fast%20API%20-%23F7DF1E.svg?&style=for-the-badge&color=009485&logo=fastapi&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/GCP%20-%23F7DF1E.svg?&style=for-the-badge&color=E34133&logo=google%20cloud&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/React%20-%23F7DF1E.svg?&style=for-the-badge&color=61DAFB&logo=react&logoColor=black"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/MongoDB%20-%23F7DF1E.svg?&style=for-the-badge&color=5C9A37&logo=mongodb&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/MySQL%20-%23F7DF1E.svg?&style=for-the-badge&color=1E4C68&logo=mysql&logoColor=white"
+								/>
+							</li>
+							<li class="m-1">
+								<img
+									src="https://img.shields.io/badge/jQuery%20-%23F7DF1E.svg?&style=for-the-badge&color=0769AD&logo=jquery&logoColor=white"
+								/>
+							</li>
+							<!-- <div class="skills__skill">HTML</div>
               <div class="skills__skill">CSS</div>
               <div class="skills__skill">JavaScript</div>
               <div class="skills__skill">React</div>
               <div class="skills__skill">SASS</div>
               <div class="skills__skill">GIT</div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- experience -->
-    
-    <!-- experience -->
+		<!-- experience -->
 
-    <!-- Projects section -->
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            Here are some of my personal open-source works
-          </span>
-        </h2>
+		<!-- experience -->
 
-        <div class="projects__content">
+		<!-- Projects section -->
+		<section id="projects" class="projects sec-pad">
+			<div class="main-container">
+				<h2 class="heading heading-sec heading-sec__mb-bg">
+					<span class="heading-sec__main">Projects</span>
+					<span class="heading-sec__sub">
+						Here are some of my personal open-source works
+					</span>
+				</h2>
 
-          <!-- project details modal -->   
-          <div class="my-modal">
-            <div class="my-modal-content">
-              <div id="dynamic-modal"></div>
-              <button class="js-close"><i class="far fa-times-circle"></i></button>
-            </div>
-          </div>
-          <!-- project details modal -->
+				<div class="projects__content">
+					<!-- project details modal -->
+					<div class="my-modal">
+						<div class="my-modal-content">
+							<div id="dynamic-modal"></div>
+							<button class="js-close">
+								<i class="far fa-times-circle"></i>
+							</button>
+						</div>
+					</div>
+					<!-- project details modal -->
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/Social Network.png"
-                alt="Social Networking Website"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Social Networking Website</h3>
-              <p class="projects__row-content-desc">
-                A Social Media Web-Application with Real-Time Chat and Video Call functionality, made with Django.
-                <span data-include="./case_studies/Django_Social_Network_App.html" class="projects__row-content-desc-more js-open">View more</span>
-                <!-- <span data-loadmodal="./case_studies/Django_Social_Network_App.html" class="projects__row-content-desc-more js-open">View more</span> -->
-              </p>
-              <a
-                href="https://github.com/Ronik22/Django_Social_Network_App"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Link</a
-              >
-            </div>
-          </div>
+					<div class="projects__row">
+						<div class="projects__row-img-cont">
+							<img
+								src="./assets/projects/Social Network.png"
+								alt="Social Networking Website"
+								class="projects__row-img"
+								loading="lazy"
+							/>
+						</div>
+						<div class="projects__row-content">
+							<h3 class="projects__row-content-title">
+								Social Networking Website
+							</h3>
+							<p class="projects__row-content-desc">
+								A Social Media Web-Application with Real-Time
+								Chat and Video Call functionality, made with
+								Django.
+								<span
+									data-include="./case_studies/Django_Social_Network_App.html"
+									class="projects__row-content-desc-more js-open"
+									>View more</span
+								>
+								<!-- <span data-loadmodal="./case_studies/Django_Social_Network_App.html" class="projects__row-content-desc-more js-open">View more</span> -->
+							</p>
+							<a
+								href="https://github.com/Ronik22/Django_Social_Network_App"
+								class="btn btn--med btn--theme dynamicBgClr"
+								target="_blank"
+								>Link</a
+							>
+						</div>
+					</div>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/WebChangeDetect.png"
-                alt="Website Change Detector"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Website Change Detector</h3>
-              <p class="projects__row-content-desc">
-                Detects website changes (full/part of) using image/html/text comparisons and notify users via email.
-                <span data-include="./case_studies/Website_Change_Detector.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
-              <a
-                href="https://github.com/Ronik22/website-change-detector"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Link</a
-              >
-            </div>
-          </div>
+					<div class="projects__row">
+						<div class="projects__row-img-cont">
+							<img
+								src="./assets/projects/WebChangeDetect.png"
+								alt="Website Change Detector"
+								class="projects__row-img"
+								loading="lazy"
+							/>
+						</div>
+						<div class="projects__row-content">
+							<h3 class="projects__row-content-title">
+								Website Change Detector
+							</h3>
+							<p class="projects__row-content-desc">
+								Detects website changes (full/part of) using
+								image/html/text comparisons and notify users via
+								email.
+								<span
+									data-include="./case_studies/Website_Change_Detector.html"
+									class="projects__row-content-desc-more js-open"
+									>View more</span
+								>
+							</p>
+							<a
+								href="https://github.com/Ronik22/website-change-detector"
+								class="btn btn--med btn--theme dynamicBgClr"
+								target="_blank"
+								>Link</a
+							>
+						</div>
+					</div>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/Pizzahub.png"
-                alt="Ecommerce Website"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Ecommerce Website</h3>
-              <p class="projects__row-content-desc">
-                An ECommerce Web App created using Django, lets users order food online. Items are placed under vendor-defined categories.
-                <span data-include="./case_studies/Ecommerce_Website.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
-              <a
-                href="https://github.com/Ronik22/Django_PizzaHub"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Link</a
-              >
-            </div>
-          </div>
+					<div class="projects__row">
+						<div class="projects__row-img-cont">
+							<img
+								src="./assets/projects/Pizzahub.png"
+								alt="Ecommerce Website"
+								class="projects__row-img"
+								loading="lazy"
+							/>
+						</div>
+						<div class="projects__row-content">
+							<h3 class="projects__row-content-title">
+								Ecommerce Website
+							</h3>
+							<p class="projects__row-content-desc">
+								An ECommerce Web App created using Django, lets
+								users order food online. Items are placed under
+								vendor-defined categories.
+								<span
+									data-include="./case_studies/Ecommerce_Website.html"
+									class="projects__row-content-desc-more js-open"
+									>View more</span
+								>
+							</p>
+							<a
+								href="https://github.com/Ronik22/Django_PizzaHub"
+								class="btn btn--med btn--theme dynamicBgClr"
+								target="_blank"
+								>Link</a
+							>
+						</div>
+					</div>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/VCE.png"
-                alt="Voice Email For Visually Impaired"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Voice Email Assistant</h3>
-              <p class="projects__row-content-desc">
-                The project is a python-based voice controlled email application for visually impaired people using speech to text voice response, thus enabling everyone to control their mail accounts using their voice only.
-                <span data-include="./case_studies/Voice_Email_Assistant.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
-              <a
-                href="https://github.com/Ronik22/Voice-Controlled-Email"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Link</a
-              >
-            </div>
-          </div>
+					<div class="projects__row">
+						<div class="projects__row-img-cont">
+							<img
+								src="./assets/projects/VCE.png"
+								alt="Voice Email For Visually Impaired"
+								class="projects__row-img"
+								loading="lazy"
+							/>
+						</div>
+						<div class="projects__row-content">
+							<h3 class="projects__row-content-title">
+								Voice Email Assistant
+							</h3>
+							<p class="projects__row-content-desc">
+								The project is a python-based voice controlled
+								email application for visually impaired people
+								using speech to text voice response, thus
+								enabling everyone to control their mail accounts
+								using their voice only.
+								<span
+									data-include="./case_studies/Voice_Email_Assistant.html"
+									class="projects__row-content-desc-more js-open"
+									>View more</span
+								>
+							</p>
+							<a
+								href="https://github.com/Ronik22/Voice-Controlled-Email"
+								class="btn btn--med btn--theme dynamicBgClr"
+								target="_blank"
+								>Link</a
+							>
+						</div>
+					</div>
 
-          <!-- see more block -->
-          <div id="moreText">
+					<!-- see more block -->
+					<div id="moreText">
+						<div class="projects__row">
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/projects/ECard Gen.png"
+									alt="E-Card Generator"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
+							<div class="projects__row-content">
+								<h3 class="projects__row-content-title">
+									E-Card Generator
+								</h3>
+								<p class="projects__row-content-desc">
+									Generate E-Cards (Birthday wish,
+									Anniversary, Thank you cards, etc) and send
+									them to your loved ones with a Shared Link
+									or a QR code. No information is stored in
+									the backend.
+									<span
+										data-include="./case_studies/E-Card_Generator.html"
+										class="projects__row-content-desc-more js-open"
+										>View more</span
+									>
+								</p>
+								<div class="d-flex">
+									<a
+										href="https://github.com/Ronik22/E-Card-Generator"
+										class="btn btn--med btn--theme dynamicBgClr m-1"
+										target="_blank"
+										>Link</a
+									>
+									<a
+										href="https://ronik22.github.io/E-Card-Generator/"
+										class="btn btn--med btn--theme-inv dynamicBgClr m-1"
+										target="_blank"
+										><i
+											class="fas fa-external-link-alt"
+										></i>
+										Demo</a
+									>
+								</div>
+							</div>
+						</div>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/ECard Gen.png"
-                alt="E-Card Generator"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">E-Card Generator</h3>
-              <p class="projects__row-content-desc">
-                Generate E-Cards (Birthday wish, Anniversary, Thank you cards, etc) and send them to your loved ones with a Shared Link or a QR code. No information is stored in the backend.
-                <span data-include="./case_studies/E-Card_Generator.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
-              <div class="d-flex">
-                <a
-                  href="https://github.com/Ronik22/E-Card-Generator"
-                  class="btn btn--med btn--theme dynamicBgClr m-1"
-                  target="_blank"
-                  >Link</a
-                >
-                <a
-                  href="https://ronik22.github.io/E-Card-Generator/"
-                  class="btn btn--med btn--theme-inv dynamicBgClr m-1"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i> Demo</a
-                >
-              </div>
-              
-            </div>
-          </div>
+						<div class="projects__row">
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/projects/Pypad.png"
+									alt="PyPad"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
+							<div class="projects__row-content">
+								<h3 class="projects__row-content-title">
+									PyPad
+								</h3>
+								<p class="projects__row-content-desc">
+									A Text Editor written in Python with some
+									additional features other than the basic
+									features of Notepad.
+									<span
+										data-include="./case_studies/PyPad.html"
+										class="projects__row-content-desc-more js-open"
+										>View more</span
+									>
+								</p>
+								<div class="d-flex">
+									<a
+										href="https://github.com/Ronik22/PyPad"
+										class="btn btn--med btn--theme dynamicBgClr m-1"
+										target="_blank"
+										>Link</a
+									>
+									<a
+										href="https://github.com/Ronik22/PyPad/releases/tag/v1.0"
+										class="btn btn--med btn--theme-inv dynamicBgClr m-1"
+										target="_blank"
+										><i
+											class="fa fa-download"
+											aria-hidden="true"
+										></i>
+										Demo</a
+									>
+								</div>
+							</div>
+						</div>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/Pypad.png"
-                alt="PyPad"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">PyPad</h3>
-              <p class="projects__row-content-desc">
-                A Text Editor written in Python with some additional features other than the basic features of Notepad.
-                <span data-include="./case_studies/PyPad.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
-              <div class="d-flex">
-                <a
-                  href="https://github.com/Ronik22/PyPad"
-                  class="btn btn--med btn--theme dynamicBgClr m-1"
-                  target="_blank"
-                  >Link</a
-                >
-                <a
-                  href="https://github.com/Ronik22/PyPad/releases/tag/v1.0"
-                  class="btn btn--med btn--theme-inv dynamicBgClr m-1"
-                  target="_blank"
-                  ><i class="fa fa-download" aria-hidden="true"></i> Demo</a
-                >
-              </div>
-              
-            </div>
-          </div>
+						<div class="projects__row">
+							<div class="projects__row-img-cont">
+								<img
+									src="./assets/projects/Visualizer.png"
+									alt="6 Audio Visualizer"
+									class="projects__row-img"
+									loading="lazy"
+								/>
+							</div>
+							<div class="projects__row-content">
+								<h3 class="projects__row-content-title">
+									6 Audio Visualizers
+								</h3>
+								<p class="projects__row-content-desc">
+									Collection of audio visualizers made using
+									p5.js library.
+									<span
+										data-include="./case_studies/Audio_Visualizers.html"
+										class="projects__row-content-desc-more js-open"
+										>View more</span
+									>
+								</p>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/projects/Visualizer.png"
-                alt="6 Audio Visualizer"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">6 Audio Visualizers</h3>
-              <p class="projects__row-content-desc">
-                Collection of audio visualizers made using p5.js library.
-                <span data-include="./case_studies/Audio_Visualizers.html" class="projects__row-content-desc-more js-open">View more</span>
-              </p>
+								<div class="d-flex">
+									<a
+										href="https://github.com/Ronik22/Audio-Visualizer"
+										class="btn btn--med btn--theme dynamicBgClr m-1"
+										target="_blank"
+										>Link</a
+									>
+									<a
+										href="https://ronik22.github.io/Audio-Visualizer/"
+										class="btn btn--med btn--theme-inv dynamicBgClr m-1"
+										target="_blank"
+										><i
+											class="fas fa-external-link-alt"
+										></i>
+										Demo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- exp -->
+					<div class="see-more">
+						<button
+							onclick="toggleText()"
+							id="textButton"
+							class="btn btn--med"
+						>
+							Show more <i class="fas fa-angle-down"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-              <div class="d-flex">
-                <a
-                  href="https://github.com/Ronik22/Audio-Visualizer"
-                  class="btn btn--med btn--theme dynamicBgClr m-1"
-                  target="_blank"
-                  >Link</a
-                >
-                <a
-                  href="https://ronik22.github.io/Audio-Visualizer/"
-                  class="btn btn--med btn--theme-inv dynamicBgClr m-1"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i> Demo</a
-                >
-              </div>
-              
-            </div>
-          </div>
+		<!-- Contact section -->
+		<section id="contact" class="contact sec-pad dynamicBg">
+			<div class="main-container">
+				<h2 class="heading heading-sec heading-sec__mb-med">
+					<span class="heading-sec__main heading-sec__main--lt"
+						>Contact</span
+					>
+					<span class="heading-sec__sub heading-sec__sub--lt">
+						The best ideas start as conversations
+					</span>
+				</h2>
+				<div class="contact__form-container">
+					<form action="#" class="contact__form">
+						<div class="contact__form-field">
+							<label class="contact__form-label" for="name"
+								>Name</label
+							>
+							<input
+								required
+								placeholder="Enter Your Name"
+								type="text"
+								class="contact__form-input"
+								name="name"
+								id="name"
+							/>
+						</div>
+						<div class="contact__form-field">
+							<label class="contact__form-label" for="email"
+								>Email</label
+							>
+							<input
+								required
+								placeholder="Enter Your Email"
+								type="text"
+								class="contact__form-input"
+								name="email"
+								id="email"
+							/>
+						</div>
+						<div class="contact__form-field">
+							<label class="contact__form-label" for="message"
+								>Message</label
+							>
+							<textarea
+								required
+								cols="30"
+								rows="10"
+								class="contact__form-input"
+								placeholder="Enter Your Message"
+								name="message"
+								id="message"
+							></textarea>
+						</div>
+						<button
+							type="submit"
+							class="btn btn--theme contact__btn"
+						>
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
 
-          </div>
-          <!-- exp -->
-          <div class="see-more">
-            <button onclick="toggleText()" id="textButton" class="btn btn--med">
-              Show more <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-          
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            The best ideas start as conversations
-          </span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a class="main-footer__icon" aria-label="linkedin" href="https://www.linkedin.com/in/ronikb22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              <a class="main-footer__icon" aria-label="github" href="https://github.com/Ronik22" target="_blank"><i class="fab fa-github"></i></a>
-              <a class="main-footer__icon main-footer__icon--mr-none" aria-label="Twitter" href="https://twitter.com/Ronik_DVR" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-          <div class="main-footer__row main-footer__row-2">
-            <!-- <h4 class="heading heading-sm text-lt">
+		<!-- Footer -->
+		<footer class="main-footer">
+			<div class="main-container">
+				<div class="main-footer__upper">
+					<div class="main-footer__row main-footer__row-1">
+						<h2 class="heading heading-sm main-footer__heading-sm">
+							<span>Social</span>
+						</h2>
+						<div class="main-footer__social-cont">
+							<a
+								class="main-footer__icon"
+								aria-label="linkedin"
+								href="https://www.linkedin.com/in/ronikb22/"
+								target="_blank"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+							<a
+								class="main-footer__icon"
+								aria-label="github"
+								href="https://github.com/Ronik22"
+								target="_blank"
+								><i class="fab fa-github"></i
+							></a>
+							<a
+								class="main-footer__icon main-footer__icon--mr-none"
+								aria-label="Twitter"
+								href="https://twitter.com/Ronik_DVR"
+								target="_blank"
+								><i class="fab fa-twitter"></i
+							></a>
+						</div>
+					</div>
+					<div class="main-footer__row main-footer__row-2">
+						<!-- <h4 class="heading heading-sm text-lt">
               The greatest glory in living lies not in never falling, but in rising every time we fall. 
             </h4> -->
-            <em>
-              "The greatest glory in living lies not in never falling, but in rising every time we fall."
-            </em>
-            <p class="main-footer__short-desc">
-              ~ Nelson Mandela
-            </p>
-          </div>
-        </div>
+						<em>
+							"The greatest glory in living lies not in never
+							falling, but in rising every time we fall."
+						</em>
+						<p class="main-footer__short-desc">~ Nelson Mandela</p>
+					</div>
+				</div>
 
-        <div class="main-footer__middle">
-          <a href="#">Back to the top &nbsp;&nbsp;<i class="fas fa-angle-double-up"></i></a>
-        </div>
+				<div class="main-footer__middle">
+					<a href="#"
+						>Back to the top &nbsp;&nbsp;<i
+							class="fas fa-angle-double-up"
+						></i
+					></a>
+				</div>
 
-        <div class="main-footer__lower">
-           Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Made by
-          <a rel="noreferrer" target="_blank" href="#"
-            >Ronik Bhattacharjee</a
-          >
-        </div>
-      </div>
-    </footer>
+				<div class="main-footer__lower">
+					Copyright &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					. Made by
+					<a
+						rel="noreferrer"
+						target="_blank"
+						href="https://www.linkedin.com/in/ronikb22/"
+						>Ronik Bhattacharjee</a
+					>
+				</div>
+			</div>
+		</footer>
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/split-type"></script>
-    <!-- <script type="module" src="./js/index.js"></script> -->
-    <script type="text/javascript" src="./js/gsap-timeline.js"></script>
-    <script type="text/javascript" src="./js/ham-menu.js"></script>
-    <script type="text/javascript" src="./js/modal.js"></script>
-    <script type="text/javascript" src="./js/see-more.js"></script>
-    <script type="text/javascript" src="./js/social-btn.js"></script>
-  </body>
+		<!-- Scripts -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://unpkg.com/split-type"
+		></script>
+		<!-- <script type="module" src="./js/index.js"></script> -->
+		<script type="text/javascript" src="./js/gsap-timeline.js"></script>
+		<script type="text/javascript" src="./js/ham-menu.js"></script>
+		<script type="text/javascript" src="./js/modal.js"></script>
+		<script type="text/javascript" src="./js/see-more.js"></script>
+		<script type="text/javascript" src="./js/social-btn.js"></script>
+	</body>
 </html>
