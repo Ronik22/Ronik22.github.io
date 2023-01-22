@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "This is Ronik Bhattacharjee's portfolio website",
   "scripts": {
-    "watch": "sass --watch sass/main.scss css/style.css",
-    "compile:sass": "sass sass/main.scss css/style.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-    "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
-    "build": "npm-run-all compile:sass prefix:css compress:css"
+    "grunt:js": "grunt",
+    "watch": "sass --watch src/sass/main.scss dest/style.css",
+    "compile:sass": "sass src/sass/main.scss dest/style.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dest/style.css -o dest/style.css",
+    "compress:css": "node-sass dest/style.css dest/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass prefix:css compress:css grunt:js"
   },
   "author": "Ronik Bhattacharjee",
   "license": "GPL-3.0",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-uglify": "^5.2.2",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
